@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root           'twitter_clone#welcome'
-  get 'home'  => 'twitter_clone#home'
-  get 'login' => 'twitter_clone#login'
-  get 'about' => 'twitter_clone#about'
+  get 'users/new'
 
+  root            'twitter_clone#welcome'
+  get 'home'   => 'twitter_clone#home'
+  get 'login'  => 'twitter_clone#login'
+  get 'about'  => 'twitter_clone#about'
+  get 'signup' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
