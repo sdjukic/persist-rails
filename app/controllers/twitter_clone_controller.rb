@@ -7,4 +7,8 @@ class TwitterCloneController < ApplicationController
 
   def login
   end
+
+  def welcome
+  end
+  
 end

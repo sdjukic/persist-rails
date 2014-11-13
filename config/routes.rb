@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'twitter_clone#login'
-  get 'twitter_clone/home'
-
-  get 'twitter_clone/about'
+  root           'twitter_clone#welcome'
+  get 'home'  => 'twitter_clone#home'
+  get 'login' => 'twitter_clone#login'
+  get 'about' => 'twitter_clone#about'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
