@@ -15,9 +15,12 @@ ActiveRecord::Schema.define(version: 20141115021715) do
 
   create_table "users", force: true do |t|
     t.string   "name"
+    t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
   end
+
+  add_index "users", ["name"], name: "index_users_on_name", unique: true
 
 end
