@@ -1,0 +1,12 @@
+prefix=/run/media/pedro/67750c69-ebdc-4ceb-a6da-3d7ea3a8e12d/NYTech/persist-rails/vendor/bundle/gems/nokogiri-1.6.4.1/ports/x86_64-suse-linux-gnu/libxslt/1.1.28
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib64
+includedir=${prefix}/include
+
+
+Name: libxslt
+Version: 1.1.28
+Description: XSLT library version 2.
+Requires: libxml-2.0
+Libs: -L${libdir} -lxslt  -L/run/media/pedro/67750c69-ebdc-4ceb-a6da-3d7ea3a8e12d/NYTech/persist-rails/vendor/bundle/gems/nokogiri-1.6.4.1/ports/x86_64-suse-linux-gnu/libxml2/2.9.2/lib64 -lxml2 -lm -ldl -lm 
+Cflags: -I${includedir}

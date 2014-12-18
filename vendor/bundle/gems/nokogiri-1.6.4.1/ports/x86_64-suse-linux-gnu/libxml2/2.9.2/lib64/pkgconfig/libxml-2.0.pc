@@ -1,0 +1,13 @@
+prefix=/run/media/pedro/67750c69-ebdc-4ceb-a6da-3d7ea3a8e12d/NYTech/persist-rails/vendor/bundle/gems/nokogiri-1.6.4.1/ports/x86_64-suse-linux-gnu/libxml2/2.9.2
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib64
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.9.2
+Description: libXML library version2.
+Requires:
+Libs: -L${libdir} -lxml2
+Libs.private:      -lm  
+Cflags: -I${includedir}/libxml2 
