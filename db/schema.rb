@@ -11,7 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115021715) do
+ActiveRecord::Schema.define(version: 20141216001317) do
+
+  create_table "countries", force: true do |t|
+    t.text     "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "divisions", force: true do |t|
+    t.integer  "level"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "divisions", ["country_id"], name: "index_divisions_on_country_id"
+
+  create_table "managers", force: true do |t|
+    t.text     "first_name"
+    t.text     "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.text     "name"
+    t.integer  "country_id"
+    t.integer  "division_id"
+    t.integer  "manager_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "teams", ["country_id"], name: "index_teams_on_country_id"
+  add_index "teams", ["division_id"], name: "index_teams_on_division_id"
+  add_index "teams", ["manager_id"], name: "index_teams_on_manager_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
