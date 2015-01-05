@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  age: 1
+  team_id: 1
+  stamina: 1
+  goalkeeping: 1
+  playmaking: 1
+  passing: 1
+  wing: 1
+  defending: 1
+  scoring: 1
+  set_pieces: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  age: 1
+  team_id: 1
+  stamina: 1
+  goalkeeping: 1
+  playmaking: 1
+  passing: 1
+  wing: 1
+  defending: 1
+  scoring: 1
+  set_pieces: 1

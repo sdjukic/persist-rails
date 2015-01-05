@@ -1,0 +1,37 @@
+h1 
+  ' Player
+  => @player.first_name
+  = @player.last_name
+
+h3
+  ' Team
+  = link_to "#{@team.name}", team_path(@team)
+
+ul
+  li
+    ' Age
+    = @player.age
+  li
+    ' Stamina
+    = @player.stamina
+  li
+    ' Goalkeeping
+    =  @player.goalkeeping
+  li 
+    ' Playmaking
+    = @player.playmaking
+  li 
+    ' Passing
+    = @player.passing
+  li
+    ' Wing
+    = @player.wing
+  li
+    ' Defending
+    = @player.defending
+  li
+    ' Scoring
+    = @player.scoring
+  li
+    ' Set Pieces
+    = @player.set_pieces

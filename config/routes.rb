@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
+  get 'players/new'
+
+  get 'teams/new'
+
   get 'sessions/new'
 
   get 'users/new'
 
-  root            'twitter_clone#welcome'
-  get 'home'   => 'twitter_clone#home'
-  get 'about'  => 'twitter_clone#about'
-  get 'signup' => 'users#new'
-  get 'login'  => 'sessions#new'
-  post 'login'  => 'sessions#create'
-  delete 'login'  => 'sessions#destroy'
+  root               'twitter_clone#welcome'
+  get 'home'          => 'twitter_clone#home'
+  get 'about'         => 'twitter_clone#about'
+  get 'signup'        => 'users#new'
+  get 'login'         => 'sessions#new'
+  post 'login'        => 'sessions#create'
+  delete 'login'      => 'sessions#destroy'
+  get 'division/:id', to: 'divisions#show', as: :division 
+  get 'player/:id', to: 'players#show', as: :player
+
   resources :users
+  resources :teams
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

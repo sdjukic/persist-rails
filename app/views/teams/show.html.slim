@@ -1,0 +1,13 @@
+h1 
+  | Team 
+  = @team.name
+
+h3
+  ' Division
+  = link_to "Some league", division_path(@team.division_id)
+
+p Players
+
+ol
+  - @players.each do |player|
+    li = link_to "#{player.first_name} #{player.last_name} ", player_path(player.id)
